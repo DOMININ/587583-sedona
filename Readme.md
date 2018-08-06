@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Дмитрий Долгушин](https://up.htmlacademy.ru/htmlcss/22/user/587583).
-* Наставник: `Неизвестно`.
+* Наставник: [Галина Борисова](https://htmlacademy.ru/profile/galina_borisova).
 
 ---
 
