@@ -79,9 +79,10 @@
 		<section class="search">
 			<h2>Заинтересовались?</h2>
 			<p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+			<a href="#" class="search-open-form">Поиск гостиницы в Седоне</a>
 		</section>
 		<section class="map">
-			<img src="img/map.png" width="800" height="500" alt="Карта">
+			<img src="img/map.png" width="800" height="500" alt="Город Седона, штат Аризона">
 		</section>
 	</main>
 	<footer class="main-footer">
@@ -95,9 +96,32 @@
 		</div>
 		<p>Website by<a href="https://htmlacademy.ru/intensive/htmlcss" class="website-by-logo"></a></p>
 	</footer>  
-	<section class="modal modal-map">
-		<h2>Поиск гостиницы в Седоне</h2>
-		<span class="modal-close">x</span>
+	<section class="search-popup">
+		<form class="search-form" action="#" method="post">
+			<p class="search-item">
+				<label for="arrival-date">Дата заезда:</label>
+				<input id="arrival-date" type="text" name="arrival" value="" placeholder="24 апреля 2017">
+				<button class="calendar" type="button" onclick="">Календарь</button>
+			</p>
+			<p class="search-item">
+				<label for="departure-date">Дата выезда:</label>
+				<input id="departure-date" type="text" name="departure" value="" placeholder="4 июля 2017">
+				<button class="calendar" type="button" onclick="">Календарь</button>
+			</p>
+			<p class="search-item">
+				<label for="adult-qty">Взрослые:</label>
+				<button class="button-minus" type="button">Кнопка минус</button>
+				<input id="adult-qty" type="text" name="adult" value="" placeholder="2">
+				<button class="button-plus" type="button">Кнопка плюс</button>
+			</p>
+			<p class="search-item">
+				<label for="kid-qty">Дети:</label>
+				<button class="button-minus" type="button">Кнопка минус</button>
+				<input id="kid-qty" type="text" name="kid" value="" placeholder="0">
+				<button class="button-plus" type="button">Кнопка плюс</button>
+			</p>
+		</form>
+		<button class="search-button" type="button">Найти</button>
 	</section>
 </body>
 </html>
