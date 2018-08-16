@@ -23,9 +23,56 @@
 		<h1 class="visually-hidden">Гостиницы</h1>
 		<section class="filters">
 			<h2 class="visually-hidden">Фильтр гостиниц</h2>
-			<!-- Здесь будет форма -->
+			<form class="filter" action="#" method="get">
+				<fieldset>
+					<legend>Инфраструктура:</legend>
+					<ul>
+						<li class="filter-option">
+							<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pool" id="filter-pool" checked>
+							<label for="filter-pool">Бассейн</label>>
+						</li>
+						<li class="filter-option">
+							<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="parking" id="filter-parking">
+							<label for="filter-parking">Парковка</label>
+						</li>
+						<li class="filter-option">
+							<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="wi-fi" id="filter-wi-fi">
+							<label for="filter-wi-fi">Wi-fi</label>
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset>
+					<legend>Тип жилья:</legend>
+					<ul>
+						<li class="filter-option">
+							<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hotel" id="filter-hotel" checked>
+							<label for="filter-hotel">Гостиница</label>
+						</li>
+						<li class="filter-option">
+							<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="motel" id="filter-motel" checked>
+							<label for="filter-motel">Мотель</label>
+						</li>
+						<li class="filter-option">
+							<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="apartments" id="filter-apartments" checked>
+							<label for="filter-apartments">Апартаменты</label>
+						</li>
+					</ul>
+				</fieldset>
+			</form>
 			<div class="price-per-day">
-				<!-- Здесь блок "стоимость в сутки" -->
+				<p>Стоимость в сутки (Р):</p>
+				<form class="price-form" action="#" method="post">
+					<p>
+						<label class="visually-hidden" for="price-start">От 0</label>
+						<input class="price-input" id="price-start" type="number" name="price-begin" placeholder="От 0">
+					</p>
+					<p>
+						<label class="visually-hidden" for="price-close">До 3000</label>
+						<input class="price-input" id="price-close" type="number" name="price-end" placeholder="До 3000">
+					</p>
+					<!-- Здесь будет ползунок -->
+				</form>
+				<button type="submit" class="filter-button">Показать</button>
 			</div>
 		</section>
 		<section class="sorting">
@@ -61,6 +108,7 @@
 				<p class="hotel-type">Гостиница</p>
 				<a href="#" class="more-info">Подробнее</a>
 				<p class="hotel-price">От 4000 р.</p>
+				<button type="submit" class="reservation-button">Забронировать</button>
 			</article>
 			<article class="hotel">
 				<div class="hotel-img">
@@ -70,6 +118,7 @@
 				<p class="hotel-type">Мотель</p>
 				<a href="#" class="more-info">Подробнее</a>
 				<p class="hotel-price">От 3000 р.</p>
+				<button type="submit" class="reservation-button">Забронировать</button>
 			</article>
 			<article class="hotel">
 				<div class="hotel-img">
@@ -79,6 +128,7 @@
 				<p class="hotel-type">Апартаменты</p>
 				<a href="#" class="more-info">Подробнее</a>
 				<p class="hotel-price">От 2000 р.</p>
+				<button type="submit" class="reservation-button">Забронировать</button>
 			</article>
 		</section>
 	</main>
