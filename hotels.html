@@ -9,7 +9,7 @@
 	<header class="main-header">
 		<nav class="main-navigation">
 			<a href="index.html" class="main-logo">
-				<img src="img/main-logo.svg" width="300" height="150" alt="Логотип Седоны">
+				<img src="img/main-logo.svg" width="140" height="71" alt="Логотип Седоны">
 			</a>
 			<ul class="navigation-list">
 				<li><a href="info.html">Информация</a></li>
@@ -23,7 +23,7 @@
 		<h1 class="visually-hidden">Гостиницы</h1>
 		<section class="filters">
 			<h2 class="visually-hidden">Фильтр гостиниц</h2>
-			<form class="filter" action="#" method="get">
+			<form class="filter" action="#" method="post">
 				<fieldset>
 					<legend>Инфраструктура:</legend>
 					<ul>
@@ -62,14 +62,16 @@
 			<div class="price-per-day">
 				<p>Стоимость в сутки (Р):</p>
 				<form class="price-form" action="#" method="post">
-					<p>
-						<label class="visually-hidden" for="price-start">От 0</label>
-						<input class="price-input" id="price-start" type="number" name="price-begin" placeholder="От 0">
-					</p>
-					<p>
-						<label class="visually-hidden" for="price-close">До 3000</label>
-						<input class="price-input" id="price-close" type="number" name="price-end" placeholder="До 3000">
-					</p>
+					<div class="price-item">
+						<label class="visually-hidden">От
+						<input class="price-input" type="number" name="price-begin" placeholder="От 0" value="0">
+						</label>
+					</div>
+					<div class="price-item">
+						<label class="visually-hidden">До
+						<input class="price-input" type="number" name="price-end" placeholder="До 3000" value="3000">
+						</label>
+					</div>
 					<!-- Здесь будет ползунок -->
 				</form>
 				<button type="submit" class="filter-button">Показать</button>
@@ -92,17 +94,17 @@
 			</ul>
 			<ul class="arrows-list">
 				<li class="arrows-item">
-					<a href="#" class="arrows-up"></a>
+					<a href="#" class="arrows-up" aria-label="По возрастанию"></a>
 				</li>
 				<li class="arrows-item">
-					<a href="#" class="arrows-down"></a>
+					<a href="#" class="arrows-down" aria-label="По убыванию"></a>
 				</li>
 			</ul>
 		</section>
 		<section class="hotels-found">
 			<article class="hotel">
 				<div class="hotel-img">
-					<img src="img/amara.jpg" width="200" height="100" alt="Amara resort & spa">
+					<img src="img/amara.jpg" width="135" height="90" alt="Amara resort & spa">
 				</div>
 				<h3 class="hotel-name">Amara resort & spa</h3>
 				<p class="hotel-type">Гостиница</p>
@@ -112,7 +114,7 @@
 			</article>
 			<article class="hotel">
 				<div class="hotel-img">
-					<img src="img/desert.jpg" width="200" height="100" alt="Desert quail inn">
+					<img src="img/desert.jpg" width="135" height="90" alt="Desert quail inn">
 				</div>
 				<h3 class="hotel-name">Desert quail inn</h3>
 				<p class="hotel-type">Мотель</p>
@@ -122,7 +124,7 @@
 			</article>
 			<article class="hotel">
 				<div class="hotel-img">
-					<img src="img/villas.jpg" width="200" height="100" alt="Villas at poco diablo">
+					<img src="img/villas.jpg" width="135" height="90" alt="Villas at poco diablo">
 				</div>
 				<h3 class="hotel-name">Villas at poco diablo</h3>
 				<p class="hotel-type">Апартаменты</p>
@@ -141,7 +143,9 @@
 				<li><a class="social-button" href="#">Ютьюб</a></li>
 			</ul>
 		</div>
-		<p>Website by<a href="https://htmlacademy.ru/intensive/htmlcss" class="website-by-logo"></a></p>
+		<p>Website by<a href="https://htmlacademy.ru/intensive/htmlcss" class="website-by-logo">
+			<img src="img/academy-logo.svg" width="115" height="40" alt="Логотип Академии">
+		</a></p>
 	</footer> 
 </body>
 </html>

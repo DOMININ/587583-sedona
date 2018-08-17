@@ -9,7 +9,7 @@
 	<header class="main-header">
 		<nav class="main-navigation">
 			<a class="main-logo">
-				<img src="img/main-logo.svg" width="300" height="150" alt="Логотип Седоны">
+				<img src="img/main-logo.svg" width="140" height="71" alt="Логотип Седоны">
 			</a>
 			<ul class="navigation-list">
 				<li><a href="info.html">Информация</a></li>
@@ -22,7 +22,7 @@
 	<main class="container">
 		<h1 class="visually-hidden">Седона</h1>
 		<section class="greeting">
-			<img src="img/welcome.svg" width="300" height="200" alt="Welcome">
+			<img src="img/welcome.svg" width="458" height="353" alt="Welcome">
 		</section>
 		<section class="features">
 			<h2 class="visually-hidden">Преимущества</h2>
@@ -33,7 +33,7 @@
 				<p>— №1 —</p>
 				<p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
 				<div class="features-city-img">
-					<img src="img/city.jpg" width="300" height="150" alt="Городок">
+					<img src="img/city.jpg" width="800" height="256" alt="Городок">
 				</div>
 			</div>
 			<ul class="features-list-sedona">
@@ -52,7 +52,7 @@
 			</ul>
 			<div class="features-bridge">
 				<div class="features-bridge-img">
-					<img src="img/bridge.jpg" width="300" height="150" alt="Мост Дьявола">
+					<img src="img/bridge.jpg" width="800" height="256" alt="Мост Дьявола">
 				</div>
 				<h3>Там есть мост дьявола</h3>
 				<p>— №2 —</p>
@@ -82,7 +82,7 @@
 			<a href="#" class="search-open-form">Поиск гостиницы в Седоне</a>
 		</section>
 		<section class="map">
-			<img src="img/map.png" width="800" height="500" alt="Город Седона, штат Аризона">
+			<img src="img/map.png" width="1200" height="473" alt="Город Седона, штат Аризона">
 		</section>
 	</main>
 	<footer class="main-footer">
@@ -94,32 +94,34 @@
 				<li><a class="social-button" href="#">Ютьюб</a></li>
 			</ul>
 		</div>
-		<p>Website by<a href="https://htmlacademy.ru/intensive/htmlcss" class="website-by-logo"></a></p>
+		<p>Website by<a href="https://htmlacademy.ru/intensive/htmlcss" class="website-by-logo">
+			<img src="img/academy-logo.svg" width="115" height="40" alt="Логотип Академии">
+		</a></p>
 	</footer>  
 	<section class="search-popup">
 		<form class="search-form" action="#" method="post">
-			<p class="search-item">
+			<div class="search-item">
 				<label for="arrival-date">Дата заезда:</label>
 				<input id="arrival-date" type="text" name="arrival" value="" placeholder="24 апреля 2017">
 				<button class="calendar" type="button" onclick="">Календарь</button>
-			</p>
-			<p class="search-item">
+			</div>
+			<div class="search-item">
 				<label for="departure-date">Дата выезда:</label>
 				<input id="departure-date" type="text" name="departure" value="" placeholder="4 июля 2017">
 				<button class="calendar" type="button" onclick="">Календарь</button>
-			</p>
-			<p class="search-item">
+			</div>
+			<div class="search-item">
 				<label for="adult-qty">Взрослые:</label>
 				<button class="button-minus" type="button">Кнопка минус</button>
-				<input id="adult-qty" type="text" name="adult" value="" placeholder="2">
+				<input id="adult-qty" type="number" name="adult" value="2" placeholder="2">
 				<button class="button-plus" type="button">Кнопка плюс</button>
-			</p>
-			<p class="search-item">
+			</div>
+			<div class="search-item">
 				<label for="kid-qty">Дети:</label>
 				<button class="button-minus" type="button">Кнопка минус</button>
-				<input id="kid-qty" type="text" name="kid" value="" placeholder="0">
+				<input id="kid-qty" type="number" name="kid" value="0" placeholder="0">
 				<button class="button-plus" type="button">Кнопка плюс</button>
-			</p>
+			</div>
 		</form>
 		<button class="search-button" type="submit">Найти</button>
 	</section>
