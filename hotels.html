@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Гостиницы</title>
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 	<header class="main-header">
 		<nav class="main-navigation">
@@ -23,13 +27,13 @@
 		<h1 class="visually-hidden">Гостиницы</h1>
 		<section class="filters">
 			<h2 class="visually-hidden">Фильтр гостиниц</h2>
-			<form class="filter" action="https://echo.htmlacademy.ru"  method="post">
+			<form class="filter" action="https://echo.htmlacademy.ru" method="post">
 				<fieldset>
 					<legend>Инфраструктура:</legend>
 					<ul>
 						<li class="filter-option">
 							<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pool" id="filter-pool" checked>
-							<label for="filter-pool">Бассейн</label>>
+							<label for="filter-pool">Бассейн</label>
 						</li>
 						<li class="filter-option">
 							<input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="parking" id="filter-parking">
@@ -72,8 +76,8 @@
 					</div>
 					<!-- Здесь будет ползунок -->
 					<button type="submit" class="filter-button">Показать</button>
-				</form>
-			</div>
+				</div>
+			</form>
 		</section>
 		<section class="sorting">
 			<h2 class="visually-hidden">Сортировка гостиниц</h2>
@@ -109,6 +113,7 @@
 				<a href="#" class="more-info">Подробнее</a>
 				<p class="hotel-price">От 4000 р.</p>
 				<a class="reservation-button" href="#">Забронировать</a>
+				<p class="rating">Рейтинг: 8,5</p>
 			</article>
 			<article class="hotel">
 				<div class="hotel-img">
@@ -119,6 +124,7 @@
 				<a href="#" class="more-info">Подробнее</a>
 				<p class="hotel-price">От 3000 р.</p>
 				<a class="reservation-button" href="#">Забронировать</a>
+				<p class="rating">Рейтинг: 8,9</p>
 			</article>
 			<article class="hotel">
 				<div class="hotel-img">
@@ -129,6 +135,7 @@
 				<a href="#" class="more-info">Подробнее</a>
 				<p class="hotel-price">От 2000 р.</p>
 				<a class="reservation-button" href="#">Забронировать</a>
+				<p class="rating">Рейтинг: 9,2</p>
 			</article>
 		</section>
 	</main>
@@ -144,6 +151,7 @@
 		<p>Website by<a href="https://htmlacademy.ru/intensive/htmlcss" class="website-by-logo">
 			<img src="img/academy-logo.svg" width="115" height="40" alt="Логотип Академии">
 		</a></p>
-	</footer> 
+	</footer>
 </body>
+
 </html>
