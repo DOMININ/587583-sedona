@@ -16,11 +16,14 @@ a {
 }
 
 .wrapper {
+  width: 1200px;
+  margin:0 auto;
   background-color: #ffffff;
   box-shadow: 0 -5px 15px 0 rgba(0, 0, 0, .2);
 }
 
 .main-navigation {
+  display: flex;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
@@ -29,6 +32,8 @@ a {
 }
 
 .navigation-list {
+  margin: 0;
+  padding: 17px 68px;
   list-style: none;
 }
 
@@ -54,10 +59,12 @@ a {
   background-image: url("../img/background.jpg");
   background-position: top center;
   background-repeat: no-repeat;
+  text-align: center;
 }
 
 .features {
   text-align: center;
+  margin-bottom: 53px;
 }
 
 .features h3 {
@@ -66,24 +73,50 @@ a {
 }
 
 .features-title {
+  margin: 0;
+  padding: 0;
   font-size: 21px;
   line-height: 26px;
   color: #000000;
 }
 
 .features-reasons {
+  margin: 0;
+  padding: 0;
   line-height: 26px;
+  margin-bottom: 52px;
 }
 
 .features-city,
 .features-bridge {
+  display: flex;
   color: #ffffff;
   background-color: #81b3d2;
 }
 
+.features-block {
+  width: 400px;
+}
+
+.features-block h3 {
+  color: #ffffff;
+}
+
+.features-city-img {
+  width: 800px;
+}
+
 .features-list-sedona,
 .features-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
   list-style: none;
+}
+
+.features-item-sedona,
+.features-item {
+  width: 400px;
 }
 
 .features-list {
@@ -99,7 +132,22 @@ a {
   background-color: #81b3d2;
 }
 
+.filter {
+  display: flex;
+  justify-content: space-between;
+  width: 1056px;
+  padding: 27px 73px;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  width: 397px;
+}
+
 .filter fieldset {
+  margin: 0;
+  padding: 0;
   border: none;
 }
 
@@ -117,7 +165,17 @@ a {
   color: #6a6a6a;
 }
 
+.price-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-per-day {
+  width: 322px;
+}
+
 .price-per-day p {
+  margin: 0;
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
@@ -152,15 +210,28 @@ a {
   color: #000000;
 }
 
+.sorting p {
+  margin: 0;
+}
+
 .sorting-name {
   font-size: 12px;
   line-height: 18px;
   color: #000000;
 }
 
+.list-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .sorting-list,
 .arrows-list {
   list-style: none;
+}
+
+.sorting {
+  padding: 26px 73px;
 }
 
 .sorting-item a {
@@ -190,6 +261,20 @@ a {
   color: #000000;
 
   border: 0;
+}
+
+.hotel {
+  display: flex;
+  padding: 6px 73px;
+}
+
+.hotel p,
+.hotel h3 {
+  margin: 0;
+}
+
+.hotel-container {
+  display: flex;
 }
 
 .hotel-name {
@@ -298,7 +383,18 @@ a {
   text-align: center;
 }
 
+.main-footer {
+  padding: 36px 72px;
+}
+
+.main-footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .hashtag {
+  margin: 0;
+  width: 240px;
   color: #000000;
   font-size: 21px;
   font-weight: 700;
@@ -307,6 +403,8 @@ a {
 }
 
 .copyright {
+  margin: 0;
+  width: 240px;
   color: #000000;
   font-size: 14px;
   line-height: 26px;
@@ -314,6 +412,8 @@ a {
 }
 
 .footer-social ul {
+  margin: 0;
+  width: 400px;
   text-align: center;
   list-style: none;
 }
