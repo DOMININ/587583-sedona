@@ -85,11 +85,11 @@
 			</section>
 			<section class="search">
 				<h2>Заинтересовались?</h2>
-				<p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+				<p>Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 				<a href="#" class="search-open-form">Поиск гостиницы в Седоне</a>
 			</section>
 			<section class="map">
-				<img src="img/map.png" width="1200" height="473" alt="Город Седона, штат Аризона">
+				<img src="img/map.png" class="mini-map" width="1200" height="473" alt="Город Седона, штат Аризона">
 			</section>
 		</main>
 		<footer class="main-footer">
@@ -97,16 +97,37 @@
 				<p class="hashtag">#Visitsedona</p>
 				<div class="footer-social">
 					<ul>
-						<li><a class="social-button" href="#">Twitter</a></li>
-						<li><a class="social-button" href="#">Facebook</a></li>
-						<li><a class="social-button" href="#">Youtube</a></li>
+						<li><a class="social-button" href="#"><span class="visually-hidden">Twitter</span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="17" height="15" viewBox="0 0 17 15">
+							<path fill="#FFFFFF" d="M10.95,0.144c1.685-0.496,2.984,0.27,3.577,1.179c0.673-0.231,1.331-0.481,2.011-0.708
+								c-0.004,0.861-0.522,1.513-0.857,1.768c0.685,0.17,1.304-0.491,1.304-0.491c-0.169,1-1.006,1.788-1.563,2.024
+								c-0.231,6.75-3.175,11.217-10.077,11.082c-0.522,0,0.075,0-0.446,0c-0.41,0-4.164-0.46-4.898-1.887
+								c2.271,0.196,3.893-0.422,4.693-1.177c-0.96-0.3-2.679-0.477-2.979-2.95C2.064,9.09,2.279,9.212,2.905,9.103
+								C1.705,8.247,0.374,7.53,0.448,5.33c0.285,0.328,1.067,0.536,1.34,0.472c-0.703-0.241-1.97-3.36-0.894-4.952
+								c1.818,1.854,3.735,3.606,7.152,3.773C8.254,2.33,9.183,0.793,10.95,0.144z">
+							</path>
+						</svg>
+						</a></li>
+						<li><a class="social-button" href="#"><span class="visually-hidden">Facebook</span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="12" height="22" viewBox="0 0 12 22">
+							<path fill="#FFFFFF" d="M12,4V0H8C5.791,0,4,1.791,4,4v4H0v4h4v10h4V12h4V8H8V4H12z">
+							</path>
+						</svg>
+						</a></li>
+						<li><a class="social-button" href="#"><span class="visually-hidden">Youtube</span>
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16">
+							<path fill="#FFFFFF" d="M17,0H3C1.35,0,0,1.35,0,3v10c0,1.65,1.35,3,3,3h14c1.65,0,3-1.35,3-3V3C20,1.35,18.65,0,17,0z
+								 M6.027,11.998V4.002L15.014,8L6.027,11.998z">
+							</path>
+						</svg>
+						</a></li>
 					</ul>
 				</div>
 				<p class="copyright">
 					Website by
 					<a href="https://htmlacademy.ru/intensive/htmlcss" class="website-by-logo">
 					<img src="img/academy-logo.svg" width="115" height="40" alt="Логотип Академии">
-				</a>
+					</a>
 				</p>
 			</div>
 		</footer>
@@ -114,25 +135,27 @@
 			<form class="search-form" action="https://echo.htmlacademy.ru" method="post">
 				<div class="search-item">
 					<label for="arrival-date">Дата заезда:</label>
-					<input id="arrival-date" type="text" name="arrival" value="" placeholder="24 апреля 2017">
-					<button class="calendar" type="button">Календарь</button>
+					<input class="date-enter" id="arrival-date" type="text" name="arrival" value="" placeholder="24 апреля 2017">
+					<button class="calendar visually-hidden" type="button">К</button>
 				</div>
 				<div class="search-item">
 					<label for="departure-date">Дата выезда:</label>
-					<input id="departure-date" type="text" name="departure" value="" placeholder="4 июля 2017">
-					<button class="calendar" type="button">Календарь</button>
+					<input class="date-exit" id="departure-date" type="text" name="departure" value="" placeholder="4 июля 2017">
+					<button class="calendar visually-hidden" type="button">К</button>
 				</div>
-				<div class="search-item">
-					<label for="adult-qty">Взрослые:</label>
-					<button class="button-minus" type="button">Кнопка минус</button>
-					<input id="adult-qty" type="number" name="adult" value="2" placeholder="2">
-					<button class="button-plus" type="button">Кнопка плюс</button>
-				</div>
-				<div class="search-item">
-					<label for="kid-qty">Дети:</label>
-					<button class="button-minus" type="button">Кнопка минус</button>
-					<input id="kid-qty" type="number" name="kid" value="0" placeholder="0">
-					<button class="button-plus" type="button">Кнопка плюс</button>
+				<div class="number-of-people">
+					<div class="search-item">
+						<label for="adult-qty">Взрослые:</label>
+						<button class="button-minus visually-hidden" type="button">-</button>
+						<input class="enter-adult" id="adult-qty" type="number" name="adult" value="2" placeholder="2">
+						<button class="button-plus visually-hidden" type="button">+</button>
+					</div>
+					<div class="search-item">
+						<label for="kid-qty">Дети:</label>
+						<button class="button-minus visually-hidden" type="button">-</button>
+						<input class="enter-kid" id="kid-qty" type="number" name="kid" value="0" placeholder="0">
+						<button class="button-plus visually-hidden" type="button">+</button>
+					</div>
 				</div>
 				<button class="search-button" type="submit">Найти</button>
 			</form>
