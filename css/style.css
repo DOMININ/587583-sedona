@@ -97,7 +97,7 @@ input[type="radio"].visually-hidden {
 }
 
 .greeting {
-  background: url("../img/mask.svg") no-repeat center bottom,
+  background: url("../img/mask.svg") no-repeat bottom center,
               url("../img/background.jpg") no-repeat top center;
   background-color: #81b3d2;
   text-align: center;
@@ -108,7 +108,7 @@ input[type="radio"].visually-hidden {
 
 .features {
   text-align: center;
-  margin-bottom: 53px;
+  margin-bottom: 49px;
 }
 
 .features h3 {
@@ -117,7 +117,7 @@ input[type="radio"].visually-hidden {
 }
 
 .features-title {
-  width: 440px;
+  width: 441px;
   margin: 0 auto;
   margin-bottom: 28px;
   font-size: 21px;
@@ -158,7 +158,7 @@ input[type="radio"].visually-hidden {
 
 .features-block p:last-child {
   margin-top: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 39px;
 }
 
 .features-city-img {
@@ -225,7 +225,7 @@ input[type="radio"].visually-hidden {
 .features-item-sedona p {
   margin: 0 auto;
   margin-top: 27px;
-  margin-bottom: 83px;
+  margin-bottom: 81px;
   width: 285px;
 }
 
@@ -240,13 +240,13 @@ input[type="radio"].visually-hidden {
 }
 
 .features-list p {
-  width: 262px;
+  width: 264px;
   margin: 0 auto;
   margin-top: 24px;
 }
 
 .features-item:nth-child(3) p {
-  width: 247px;
+  width: 248px;
 }
 
 .features-list p:last-child {
@@ -266,14 +266,15 @@ input[type="radio"].visually-hidden {
 .filter {
   display: flex;
   justify-content: space-between;
-  width: 1056px;
+  width: 1067px;
   padding: 27px 73px;
+  padding-bottom: 6px;
 }
 
 .filter-container {
   display: flex;
   justify-content: space-between;
-  width: 397px;
+  width: 386px;
 }
 
 .filter fieldset {
@@ -283,7 +284,7 @@ input[type="radio"].visually-hidden {
 }
 
 .filter legend {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
@@ -296,8 +297,8 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-option {
-  margin-bottom: 30px;
-  padding-left: 42px;
+  margin-bottom: 25px;
+  padding-left: 38px;
 }
 
 .filter-option label {
@@ -310,38 +311,45 @@ input[type="radio"].visually-hidden {
 .filter-input-checkbox + label::before {
   content: "";
   position: absolute;
-  left: -42px;
+  left: -39px;
   top: -2px;
   width: 23px;
   height: 23px;
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
-  background-position: 0 0;
 }
 
-.filter-input-checkbox:checked + label::after {
-  content: "";
-  position: absolute;
-  left: -42px;
-  top: -2px;
+.filter-input-checkbox:checked + label::before {
   width: 27px;
-  height: 23px;
   background-image: url("../img/checkbox-on.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
 }
 
-.filter-input:disabled + label {
+.filter-input-checkbox:focus + label::before {
+  outline: 1px dashed #ffffff;
+  outline-offset: 2px;
+}
+
+.filter-input-checkbox:disabled + label {
   color: #6a6a6a;
 }
 
+.filter-input-checkbox:disabled + label::before {
+  background-image: url("../img/checkbox-off-disabled.svg");
+}
+
+.filter-input-checkbox:checked:disabled + label::before {
+  width: 27px;
+  background-image: url("../img/checkbox-on-disabled.svg");
+}
+
 .price-per-day {
-  width: 330px;
+  width: 320px;
+  margin-right: 10px;
 }
 
 .price-per-day p {
   margin: 0;
-  margin-bottom: 9px;
+  margin-bottom: 10px;
   font-size: 16px;
   line-height: 21px;
   font-weight: 700;
@@ -349,6 +357,7 @@ input[type="radio"].visually-hidden {
 
 .price-item {
   position: relative;
+  width: 315px;
   height: 32px;
   margin-bottom: 20px;
   font-size: 0;
@@ -378,13 +387,20 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
-.price-item .price-min,
-.price-item .price-max {
-  width: 90px;
+.price-item .price-min {
+  width: 93px;
   padding-left: 65px;
 }
 
+.price-item .price-max {
+  width: 102px;
+  padding-left: 54px;
+}
+
+
+
 .price-item  input {
+  height: 30px;
   width: 50px;
   margin: 0;
 
@@ -408,7 +424,7 @@ input[type="radio"].visually-hidden {
 }
 
 .range-controls .bar {
-  width: 80%;
+  width: 85%;
   height: 2px;
 
   background: #ffffff;
@@ -437,13 +453,14 @@ input[type="radio"].visually-hidden {
 }
 
 .range-toggle-max {
-  left: 80%;
+  left: 79%;
 }
 
 .filter-button {
   display: block;
   margin: 0 auto;
-  padding: 6px 35px;
+  margin-right: 97px;
+  padding: 6px 34px;
 
   font-size: 14px;
   line-height: 20px;
@@ -464,18 +481,24 @@ input[type="radio"].visually-hidden {
 
 .find {
   margin: 0;
-  margin-right: 54px;
+  margin-right: 46px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
 }
 
+.sorting {
+  padding: 30px 72px;
+  padding-right: 73px;
+  padding-bottom: 26px;
+}
+
 .sorting-name {
   margin: 0;
-  margin-right: 45px;
+  margin-right: 41px;
   font-size: 12px;
-  line-height: 26px;
+  line-height: 30px;
   color: #000000;
 }
 
@@ -491,7 +514,7 @@ input[type="radio"].visually-hidden {
 .sorting-list {
   display: flex;
   justify-content: space-between;
-  width: 243px;
+  width: 239px;
 }
 
 .arrows-list {
@@ -507,13 +530,9 @@ input[type="radio"].visually-hidden {
   list-style: none;
 }
 
-.sorting {
-  padding: 26px 73px;
-}
-
 .sorting-item a {
   font-size: 12px;
-  line-height: 26px;
+  line-height: 29px;
   color: #000000;
   opacity: 0.3;
 
@@ -538,6 +557,10 @@ input[type="radio"].visually-hidden {
   color: #000000;
 
   border: 0;
+}
+
+li.arrows-item {
+  padding-top: 4px;
 }
 
 .arrows-up polygon:hover,
@@ -572,7 +595,7 @@ input[type="radio"].visually-hidden {
 }
 
 .hotel-img {
-  margin-right: 30px;
+  margin-right: 28px;
 }
 
 .button-container-list {
@@ -588,7 +611,8 @@ input[type="radio"].visually-hidden {
 }
 
 h3.hotel-name {
-  margin-bottom: 9px;
+  margin-bottom: 7px;
+  margin-top: -5px;
 }
 
 .hotel-name {
@@ -608,11 +632,11 @@ h3.hotel-name {
 }
 
 p.hotel-type {
-  margin-bottom: 9px;
+  margin-bottom: 16px;
 }
 
 .more-info {
-  padding: 3px 17px;
+  padding: 4px 17px;
   color: #ffffff;
   text-align: center;
   vertical-align: middle;
@@ -634,11 +658,11 @@ p.hotel-type {
 }
 
 p.hotel-price {
-  margin-bottom: 9px;
+  margin-bottom: 16px;
 }
 
 .reservation-button {
-  padding: 3px 17px;
+  padding: 4px 17px;
   color: #ffffff;
   text-align: center;
   vertical-align: middle;
@@ -659,8 +683,31 @@ p.hotel-price {
   background-color: #503e33;
 }
 
+.stars {
+  height: 17px;
+  background-image: url("../img/star.svg");
+  background-position: right;
+}
+
+.stars[data-rating="4"] {
+  width: 72px;
+}
+
+.stars[data-rating="3"] {
+  width: 54px;
+}
+
+.stars[data-rating="2"] {
+  width: 36px;
+}
+
 p.stars {
   margin-bottom: 5px;
+}
+
+.rating-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .rating {
@@ -685,9 +732,9 @@ p.stars {
 
 .search p {
   margin: 0 auto;
-  margin-top: 35px;
-  margin-bottom: 50px;
-  width: 435px;
+  margin-top: 24px;
+  margin-bottom: 47px;
+  width: 436px;
   line-height: 24px;
 }
 
@@ -695,7 +742,7 @@ p.stars {
 
 .search-open-form {
   display: inline-block;
-  padding: 30px 135px;
+  padding: 30px 139px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -754,6 +801,10 @@ p.stars {
   line-height: 48px;
 }
 
+.website-by-logo {
+  padding-top: 4px;
+}
+
 .website-by-logo:hover path,
 .website-by-logo:focus path {
   fill: #81b3d2;
@@ -801,6 +852,7 @@ p.stars {
 }
 
 .search-popup {
+  width: 458px;
   padding: 55px;
   font-size: 14px;
   line-height: 26px;
@@ -809,9 +861,11 @@ p.stars {
 }
 
 .search-form {
-  margin: 0 auto;
-  width: 458px;
   text-align: center;
+}
+
+.search-form label {
+  padding-top: 5px;
 }
 
 .search-form input[type="text"],
@@ -819,7 +873,7 @@ p.stars {
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
-  width: 307px;
+  width: 295px;
   color: #000000;
   text-transform: uppercase;
 
@@ -828,9 +882,14 @@ p.stars {
 }
 
 .search-form input[type="text"] {
+  height: 26px;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 12px;
+}
+
+.search-form input[type="text"]::-webkit-input-placeholder {
+  color: #000000;
 }
 
 .search-form input[type="number"] {
@@ -865,6 +924,14 @@ input::-webkit-inner-spin-button {
   display: flex;
   justify-content: space-between;
   margin-bottom: 54px;
+}
+
+.date-enter-label {
+  width: 92px;
+}
+
+.date-exit-label {
+  width: 96px;
 }
 
 .date-enter {
