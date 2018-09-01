@@ -59,7 +59,8 @@ input[type="radio"].visually-hidden {
   position: absolute;
   left: 50%;
   margin-left:-70px;
-  cursor: pointer
+  cursor: pointer;
+  z-index: 1;
 }
 
 .navigation-list {
@@ -97,13 +98,23 @@ input[type="radio"].visually-hidden {
 }
 
 .greeting {
-  background: url("../img/mask.svg") no-repeat bottom center,
-              url("../img/background.jpg") no-repeat top center;
+  position: relative;
+  background: url("../img/background.jpg") no-repeat top center;
   background-color: #81b3d2;
   text-align: center;
   padding-top: 76px;
   padding-bottom: 74px;
   margin-bottom: 60px;
+}
+
+.greeting::after {
+  position: absolute;
+  content: "";
+  width: 1200px;
+  height: 57px;
+  background: url("../img/mask.svg") no-repeat;
+  left: 0;
+  bottom: -1px;
 }
 
 .features {
@@ -274,7 +285,7 @@ input[type="radio"].visually-hidden {
 .filter-container {
   display: flex;
   justify-content: space-between;
-  width: 386px;
+  width: 389px;
 }
 
 .filter fieldset {
@@ -301,7 +312,19 @@ input[type="radio"].visually-hidden {
   padding-left: 38px;
 }
 
+.filter-option-second {
+  margin-bottom: 25px;
+  padding-left: 41px;
+}
+
 .filter-option label {
+  position: relative;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-option-second label {
   position: relative;
 
   cursor: pointer;
@@ -409,6 +432,7 @@ input[type="radio"].visually-hidden {
 
   background: none;
   border: none;
+  -webkit-appearance: textfield;
 }
 
 .range-controls {
@@ -563,15 +587,15 @@ li.arrows-item {
   padding-top: 4px;
 }
 
-.arrows-up polygon:hover,
-.arrows-up polygon:focus,
-.arrows-down polyline:hover,
-.arrows-down polyline:focus {
+.arrows-up:hover polygon,
+.arrows-up:focus polygon,
+.arrows-down:hover polyline,
+.arrows-down:focus polyline {
   fill: #000000;
 }
 
-.arrows-up polygon:active,
-.arrows-down polyline:active {
+.arrows-up:active polygon,
+.arrows-down:active polyline {
   fill: #81b3d2;
 }
 
@@ -604,10 +628,15 @@ li.arrows-item {
   width: 258px;
 }
 
+.description-container {
+  display: flex;
+    justify-content: space-between;
+  width: 891px;
+}
+
 .hotel-container {
   display: flex;
   justify-content: space-between;
-  width: 891px;
 }
 
 h3.hotel-name {
@@ -701,13 +730,10 @@ p.hotel-price {
   width: 36px;
 }
 
-p.stars {
-  margin-bottom: 5px;
-}
-
 .rating-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .rating {
@@ -895,7 +921,7 @@ p.stars {
 .search-form input[type="number"] {
   text-align: center;
   width: 34px;
-  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
 }
 
 input::-webkit-outer-spin-button,
