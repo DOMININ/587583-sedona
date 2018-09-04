@@ -764,11 +764,9 @@ p.hotel-price {
   line-height: 24px;
 }
 
-
-
 .search-open-form {
   display: inline-block;
-  padding: 30px 139px;
+  padding: 30px 140px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -789,12 +787,40 @@ p.hotel-price {
   background-color: #503e33;
 }
 
+.map {
+  position: relative;
+}
+
+.map iframe {
+  position: relative;
+  z-index: 2;
+  display: block;
+  border: none;
+}
+
+.map img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  margin: 0;
+}
+
 .mini-map {
   display: block;
 }
 
 .main-footer {
-  padding: 36px 0px;
+  bottom: 0;
+  z-index: 2;
+  padding: 34px 0px;
+  background-color: #ffffff;
+  opacity: 0.9;
+}
+
+.main-page {
+  position: absolute;
 }
 
 .main-footer .container {
@@ -877,13 +903,62 @@ p.hotel-price {
   opacity: 0.3;
 }
 
+@keyframes drop {
+  0% {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+.search-popup-close {
+  display: none;
+}
+
+.modal-error {
+  animation: shake 0.5s;
+}
+
 .search-popup {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  z-index: 2;
+  margin-left: 16px;
   width: 458px;
   padding: 55px;
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
+  background-color: #ffffff;
+  animation: drop 0.5s;
 }
 
 .search-form {
