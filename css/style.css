@@ -65,6 +65,7 @@ input[type="radio"].visually-hidden {
 
 .navigation-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 15px 0;
   list-style: none;
@@ -77,6 +78,10 @@ input[type="radio"].visually-hidden {
 
 .navigation-list li:nth-child(4n-2) {
   margin-right: 240px;
+}
+
+.padding-container a {
+  padding-left: 17px;
 }
 
 .navigation-list a {
@@ -712,28 +717,25 @@ p.hotel-price {
   background-color: #503e33;
 }
 
-.stars {
-  height: 17px;
-  background-image: url("../img/star.svg");
-  background-position: right;
-}
-
-.stars[data-rating="4"] {
-  width: 72px;
-}
-
-.stars[data-rating="3"] {
-  width: 54px;
-}
-
-.stars[data-rating="2"] {
-  width: 36px;
-}
-
 .rating-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.stars-list {
+  display: flex;
+  align-self: flex-end;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stars-item {
+  width: 18px;
+  height: 17px;
+  margin-left: 6px;
+  background-image: url("../img/star.svg");
 }
 
 .rating {
@@ -814,7 +816,7 @@ p.hotel-price {
 .main-footer {
   bottom: 0;
   z-index: 2;
-  padding: 34px 0px;
+  padding: 35px 0px;
   background-color: #ffffff;
   opacity: 0.9;
 }
