@@ -643,11 +643,8 @@ li.arrows-item {
   margin: 0;
 }
 
-.hotel-img img {
+.hotel img {
   display: block;
-}
-
-.hotel-img {
   margin-right: 28px;
 }
 
